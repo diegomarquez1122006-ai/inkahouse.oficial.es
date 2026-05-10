@@ -178,7 +178,27 @@
         /* --- EQUIPO --- */
         .equipo { background: var(--yellow); }
         .equipo-grid { display: flex; gap: 35px; justify-content: center; flex-wrap: wrap; }
-        .member { background: white; padding: 40px; border: var(--border-width) solid var(--navy); width: 45%; min-width: 310px; border-radius: 25px; }
+        .member { 
+            background: white; 
+            padding: 40px; 
+            border: var(--border-width) solid var(--navy); 
+            width: 45%; 
+            min-width: 310px; 
+            border-radius: 25px; 
+            text-align: center; /* Asegura alineación centrada para el contenido */
+        }
+        
+        /* Estilos específicos para las fotos redondas del equipo */
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Hace la foto redonda */
+            border: 5px solid var(--navy); /* Añade un borde azul marino */
+            object-fit: cover; /* Asegura que la imagen no se deforme */
+            margin: 20px auto; /* Centra horizontalmente y añade espacio */
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+        }
 
         /* --- FOOTER --- */
         footer { background: var(--navy); color: var(--white); text-align: center; padding: 70px 10%; }
@@ -203,6 +223,7 @@
             .proyecto, .obj-list { flex-direction: column; grid-template-columns: 1fr; }
             .member { width: 100%; }
             .proyecto-img { height: 250px; }
+            .member-photo { width: 120px; height: 120px; } /* Foto un poco más pequeña en móvil */
         }
     </style>
 </head>
@@ -316,6 +337,7 @@
             <div class="equipo-grid">
                 <div class="member">
                     <h3>¡Te presentamos a Amador!</h3>
+                    <img src="AMADOR.jpg" alt="Amador - Equipo INK A HOUSE" class="member-photo">
                     <p>El hermano mayor. Detrás de ese cubo hay una de las mentes más brillantes de la gestión empresarial en la UE.</p>
                     <strong>Superpoder: El papeleo.</strong>
                 </div>
