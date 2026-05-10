@@ -41,7 +41,7 @@
         /* --- NAVEGACIÓN --- */
         nav {
             background: var(--navy);
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -51,10 +51,24 @@
             border-bottom: var(--border-width) solid var(--yellow);
         }
 
-        .logo { 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .nav-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid var(--yellow);
+            object-fit: cover;
+        }
+
+        .logo-text { 
             color: var(--yellow); 
             font-size: 1.2rem; 
-            text-decoration: none; 
             font-family: 'Inknut Antiqua', serif;
             font-weight: 700;
         }
@@ -117,7 +131,7 @@
             text-align: center;
         }
 
-        /* --- SERVICIOS con fondo azul claro --- */
+        /* --- SERVICIOS --- */
         #servicios {
             background-color: var(--light-blue);
             color: var(--navy);
@@ -143,7 +157,7 @@
         .obj-item { background: white; padding: 25px; border-bottom: 6px solid var(--navy); border-radius: 12px; }
         .obj-item strong { display: block; font-family: 'Inknut Antiqua', serif; font-size: 1.1rem; margin-bottom: 10px; }
 
-        /* --- CASOS REALES con fondo azul claro --- */
+        /* --- CASOS REALES --- */
         #proyectos { 
             background-color: var(--light-blue); 
         }
@@ -165,14 +179,7 @@
             padding: 20px; 
             overflow: hidden;
         }
-        
-        .proyecto-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-        
+        .proyecto-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
         .proyecto-info { flex: 1; }
 
         /* --- EQUIPO --- */
@@ -187,7 +194,6 @@
             border-radius: 25px; 
             text-align: center;
         }
-        
         .member-photo {
             width: 150px;
             height: 150px;
@@ -229,7 +235,10 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">INK A HOUSE</a>
+        <a href="#" class="logo-container">
+            <img src="Logo.jpg" alt="Logo circular INK A HOUSE" class="nav-logo">
+            <span class="logo-text">INK A HOUSE</span>
+        </a>
         <div class="nav-links">
             <a href="#mision">Misión</a>
             <a href="#servicios">Servicios</a>
@@ -278,7 +287,7 @@
                 </div>
                 <div class="card">
                     <h3>100% Low-Cost</h3>
-                    <p>Porque tener un pisazo de revista no tiene por qué ser un lujo inalcanzable.</p>
+                    <p>Tener un pisazo de revista no tiene por qué ser un lujo inalcanzable.</p>
                 </div>
             </div>
         </div>
@@ -336,13 +345,13 @@
             <div class="equipo-grid">
                 <div class="member">
                     <h3>¡Te presentamos a Amador!</h3>
-                    <img src="AMADOR.jpg" alt="Amador - Equipo INK A HOUSE" class="member-photo">
+                    <img src="AMADOR.jpg" alt="Foto redonda Amador" class="member-photo">
                     <p>El hermano mayor. Detrás de ese cubo hay una de las mentes más brillantes de la gestión empresarial en la UE.</p>
                     <strong>Superpoder: El papeleo.</strong>
                 </div>
                 <div class="member">
                     <h3>¡Conoce a Aitor!</h3>
-                    <img src="AITOR.jpg" alt="Aitor - Equipo INK A HOUSE" class="member-photo">
+                    <img src="AITOR.jpg" alt="Foto redonda Aitor" class="member-photo">
                     <p>El hermano menor y mano de obra principal. Perfeccionista al milímetro y optimista a prueba de escombros.</p>
                     <strong>Misión: Dejar tu casa exactamente como la quieres.</strong>
                 </div>
