@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INK A HOUSE | Reformas Express para Jóvenes</title>
+    <title>INK A HOUSE | Reforma Express para Jóvenes</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700;900&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --yellow: #FCD53F;
-            --navy: #1A3A5A;
+            --yellow: #fcdd9b; 
+            --navy: #134f75;   
             --white: #ffffff;
             --gray: #f4f4f4;
             --border-width: 4px;
         }
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
+        * { 
+            box-sizing: border-box; 
+            scroll-behavior: smooth; 
+        }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Nunito', sans-serif;
             margin: 0;
             padding: 0;
             color: var(--navy);
@@ -27,7 +30,12 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3 { font-family: 'Paytone One', sans-serif; text-transform: uppercase; margin: 0; }
+        h1, h2, h3 { 
+            font-family: 'Inknut Antiqua', serif;
+            text-transform: uppercase; 
+            margin: 0;
+            line-height: 1.2;
+        }
 
         /* --- NAVEGACIÓN --- */
         nav {
@@ -42,23 +50,24 @@
             border-bottom: var(--border-width) solid var(--yellow);
         }
 
-        .logo { color: var(--yellow); font-size: 1.5rem; text-decoration: none; }
+        .logo { 
+            color: var(--yellow); 
+            font-size: 1.2rem; 
+            text-decoration: none; 
+            font-family: 'Inknut Antiqua', serif;
+            font-weight: 700;
+        }
 
         .nav-links a {
             color: var(--white);
             text-decoration: none;
             margin-left: 20px;
-            font-weight: 900;
-            font-size: 0.8rem;
+            font-weight: 800;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
 
         .nav-links a:hover { color: var(--yellow); }
-
-        /* --- SECCIONES GENERALES --- */
-        section { padding: 80px 10%; border-bottom: var(--border-width) solid var(--navy); }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .section-title { font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
 
         /* --- HERO --- */
         .hero {
@@ -70,54 +79,96 @@
             align-items: center;
         }
 
-        .hero h1 { font-size: 4.5rem; line-height: 1; margin-bottom: 20px; }
-        .hero p { font-size: 1.3rem; font-weight: 600; max-width: 700px; }
-        .badge { background: var(--navy); color: var(--white); padding: 10px 20px; font-weight: 900; margin: 20px 0; border-radius: 5px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 25px; color: var(--navy); }
+        .hero p { font-size: 1.3rem; font-weight: 600; max-width: 750px; }
+        .badge { background: var(--navy); color: var(--white); padding: 12px 24px; font-weight: 800; margin: 25px 0; border-radius: 8px; }
 
-        /* --- MISIÓN (ORÍGENES) --- */
-        .mision { background: var(--navy); color: var(--white); }
-        .mision h2 { color: var(--yellow); }
-        .mision-box { border-left: 10px solid var(--yellow); padding-left: 30px; }
+        /* --- SECCIONES --- */
+        section { padding: 80px 10%; border-bottom: var(--border-width) solid var(--navy); }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2.2rem; margin-bottom: 40px; text-align: center; }
 
-        /* --- SERVICIOS (TARJETAS) --- */
+        /* --- MISIÓN --- */
+        .mision {
+            background: var(--navy);
+            color: var(--white);
+        }
+        .mision h2 {
+            color: var(--yellow);
+            text-align: center; /* Centrar el título */
+            margin-bottom: 30px;
+        }
+        .mision-flex {
+            display: flex;
+            justify-content: center; /* Centrar el bloque de texto */
+            align-items: center;
+        }
+        .mision-text {
+            max-width: 800px; /* Ancho máximo para legibilidad */
+            width: 100%;
+        }
+        .mision-box {
+            border: 6px solid var(--yellow); /* Borde completo */
+            border-radius: 15px; /* Esquinas redondeadas */
+            padding: 40px; /* Acolchado */
+            background: var(--white); /* Fondo blanco para legibilidad */
+            color: var(--navy); /* Texto navy sobre fondo blanco */
+            text-align: center; /* Centrar todo el texto interior */
+        }
+
+        /* --- SERVICIOS --- */
         .grid-servicios {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
         .card {
             border: var(--border-width) solid var(--navy);
-            padding: 30px;
+            padding: 35px;
             background: var(--white);
-            transition: 0.3s;
+            transition: 0.3s ease;
+            border-radius: 15px;
         }
-        .card:hover { transform: translateY(-10px); box-shadow: 10px 10px 0 var(--yellow); }
-        .card h3 { color: var(--navy); margin-bottom: 15px; }
+        .card:hover { transform: translateY(-10px); box-shadow: 12px 12px 0 var(--yellow); }
+        .card h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: 15px; }
 
         /* --- OBJETIVOS --- */
         .objetivos { background: var(--gray); }
         .obj-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .obj-item { background: white; padding: 20px; border-bottom: 5px solid var(--navy); }
+        .obj-item { background: white; padding: 25px; border-bottom: 6px solid var(--navy); border-radius: 12px; }
+        .obj-item strong { display: block; font-family: 'Inknut Antiqua', serif; font-size: 1.1rem; margin-bottom: 10px; }
 
-        /* --- PROYECTOS (ANTES Y DESPUÉS) --- */
-        .proyecto { background: var(--white); display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+        /* --- CASOS REALES --- */
+        .proyecto { background: var(--white); display: flex; gap: 45px; align-items: center; margin-bottom: 50px; }
         .proyecto:nth-child(even) { flex-direction: row-reverse; }
-        .proyecto-img { flex: 1; background: var(--gray); height: 300px; border: var(--border-width) solid var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 900; }
+        .proyecto-img { flex: 1; background: var(--yellow); height: 320px; border: var(--border-width) solid var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--navy); border-radius: 20px; font-family: 'Inknut Antiqua', serif; text-align: center; padding: 20px; }
         .proyecto-info { flex: 1; }
 
         /* --- EQUIPO --- */
         .equipo { background: var(--yellow); }
-        .equipo-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .member { background: white; padding: 30px; border: var(--border-width) solid var(--navy); width: 45%; min-width: 300px; }
+        .equipo-grid { display: flex; gap: 35px; justify-content: center; flex-wrap: wrap; }
+        .member { background: white; padding: 40px; border: var(--border-width) solid var(--navy); width: 45%; min-width: 310px; border-radius: 25px; }
 
         /* --- FOOTER --- */
-        footer { background: var(--navy); color: var(--white); text-align: center; padding: 60px 10%; }
-        .contact-box { font-size: 1.5rem; margin: 30px 0; font-weight: 900; color: var(--yellow); }
-        .btn-cta { background: var(--yellow); color: var(--navy); padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: 900; font-size: 1.2rem; display: inline-block; }
-        .btn-cta:hover { transform: scale(1.1); }
+        footer { background: var(--navy); color: var(--white); text-align: center; padding: 70px 10%; }
+        .contact-box { font-size: 1.4rem; margin: 35px 0; font-weight: 800; color: var(--yellow); }
+        .btn-cta { 
+            background: var(--yellow); 
+            color: var(--navy); 
+            padding: 22px 45px; 
+            text-decoration: none; 
+            border-radius: 60px; 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            display: inline-block; 
+            transition: 0.4s;
+            font-family: 'Nunito', sans-serif;
+            text-transform: uppercase;
+        }
+        .btn-cta:hover { transform: scale(1.08); background: var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .proyecto, .obj-list { flex-direction: column; grid-template-columns: 1fr; }
             .member { width: 100%; }
         }
@@ -130,25 +181,29 @@
         <div class="nav-links">
             <a href="#mision">Misión</a>
             <a href="#servicios">Servicios</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#equipo">Equipo</a>
+            <a href="#proyectos">Casos</a>
+            <a href="#equipo">Nosotros</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>¿LISTO PARA INDEPENDIZARTE?</h1>
-        <p>Transformamos tu primer piso en la casa de tus sueños sin vaciarte la cartera ni darte dolores de cabeza[cite: 2].</p>
-        <div class="badge">REFORMA EXPRESS: 7 A 10 DÍAS [cite: 6]</div>
-        <a href="#contacto" class="btn-cta">¡LO QUIERO YA!</a>
+        <p>Transformamos tu primer piso en la casa de tus sueños sin vaciarte la cartera ni darte dolores de cabeza.</p>
+        <div class="badge">REFORMA EXPRESS: 7 A 10 DÍAS</div>
+        <a href="#contacto" class="btn-cta">¡SOLICITAR PRESUPUESTO CERRADO!</a>
     </header>
 
     <section id="mision" class="mision">
         <div class="container">
-            <h2 class="section-title">Sobre Nosotros</h2>
-            <div class="mision-box">
-                <p style="font-size: 1.2rem;">Surge de una frustración compartida por nuestra generación: independizarse hoy parece un <strong>deporte de riesgo</strong>[cite: 39].</p>
-                <p>Nuestra meta: Hacer que la vivienda digna y económica sea una realidad para los jóvenes, no un privilegio[cite: 27].</p>
-                <p>Tú pones la ilusión, y nosotros ponemos la "tinta" y el diseño para darle vida a tus espacios[cite: 3].</p>
+            <h2>Nuestra Misión</h2>
+            <div class="mision-flex">
+                <div class="mision-text">
+                    <div class="mision-box">
+                        <p style="font-size: 1.25rem;">Surge de una frustración compartida por nuestra generación: independizarse hoy parece un <strong>deporte de riesgo</strong>.</p>
+                        <p>Nuestra meta: Hacer que la vivienda digna y económica sea una realidad para los jóvenes, no un privilegio.</p>
+                        <p>Tú pones la ilusión, y nosotros ponemos la "tinta" y el diseño para darle vida a tus espacios.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -159,19 +214,19 @@
             <div class="grid-servicios">
                 <div class="card">
                     <h3>Reforma Express</h3>
-                    <p>Tu casa lista para entrar a vivir en un tiempo récord de 7 a 10 días. ¡Sin excusas![cite: 6].</p>
+                    <p>Tu casa lista para entrar a vivir en un tiempo récord de 7 a 10 días. ¡Sin excusas!</p>
                 </div>
                 <div class="card">
                     <h3>Presupuesto Cerrado</h3>
-                    <p>Cero sorpresas de última hora. Transparencia total desde el minuto uno[cite: 7].</p>
+                    <p>Cero sorpresas de última hora. Transparencia total desde el minuto uno.</p>
                 </div>
                 <div class="card">
-                    <h3>Pensado para hoy</h3>
-                    <p>Diseñamos tu Zona de Teletrabajo ideal y optimizamos la Eficiencia Energética[cite: 10].</p>
+                    <h3>Teletrabajo y Energía</h3>
+                    <p>Diseñamos tu Zona de Teletrabajo ideal y optimizamos la Eficiencia Energética de tu hogar.</p>
                 </div>
                 <div class="card">
                     <h3>100% Low-Cost</h3>
-                    <p>Porque tener un pisazo de revista no tiene por qué ser un lujo inalcanzable[cite: 12].</p>
+                    <p>Porque tener un pisazo de revista no tiene por qué ser un lujo inalcanzable.</p>
                 </div>
             </div>
         </div>
@@ -182,16 +237,16 @@
             <h2 class="section-title">Nuestros Objetivos</h2>
             <div class="obj-list">
                 <div class="obj-item">
-                    <strong>Transformamos viviendas:</strong> Abrimos puertas a jóvenes con precios reales[cite: 25].
+                    <strong>Facilitamos futuros:</strong> Abrimos puertas a jóvenes con reformas, compras y alquileres a precios reales.
                 </div>
                 <div class="obj-item">
-                    <strong>Conquistar el mapa:</strong> Nos expandimos nacionalmente. Más casas, más futuro[cite: 28, 29].
+                    <strong>Expansión Nacional:</strong> Nuestra meta es conquistar el mapa. Más casas, más reformas, más futuro nacional.
                 </div>
                 <div class="obj-item">
-                    <strong>Cuentas claras:</strong> Olvida el papeleo eterno: rápido, seguro y para tu bolsillo[cite: 31].
+                    <strong>Cuentas Claras:</strong> Olvida el papeleo eterno: aquí todo es rápido, seguro y pensado para tu bolsillo.
                 </div>
                 <div class="obj-item">
-                    <strong>Profesionalidad Radical:</strong> Ejecución perfecta y atención obsesiva a los detalles[cite: 32].
+                    <strong>Profesionalidad Radical:</strong> Tu confianza se traduce en una ejecución perfecta y atención obsesiva a los detalles.
                 </div>
             </div>
         </div>
@@ -199,21 +254,21 @@
 
     <section id="proyectos">
         <div class="container">
-            <h2 class="section-title">Casos de Éxito</h2>
+            <h2 class="section-title">Casos Reales</h2>
             
             <div class="proyecto">
-                <div class="proyecto-img">FOTO: EFICIENCIA TÉRMICA [cite: 34]</div>
+                <div class="proyecto-img">REFORMA TÉRMICA</div>
                 <div class="proyecto-info">
-                    <h3>Reforma de Eficiencia Térmica</h3>
-                    <p>Prioridad: Confort climático sin disparar la factura. Resultado: un espacio cálido y moderno que se calienta solo[cite: 34, 35].</p>
+                    <h3>Eficiencia Térmica Integral</h3>
+                    <p>Nuestra prioridad fue el confort climático sin disparar la factura. Resultado: un espacio cálido y moderno que se calienta solo.</p>
                 </div>
             </div>
 
             <div class="proyecto">
-                <div class="proyecto-img">FOTO: ESTUDIO [cite: 36]</div>
+                <div class="proyecto-img">DISEÑO ACÚSTICO</div>
                 <div class="proyecto-info">
-                    <h3>Diseño Acústico para Estudio</h3>
-                    <p>Maximizamos la concentración. Menos ruido, menos consumo energético y más foco para tus exámenes[cite: 36, 37].</p>
+                    <h3>Espacio para el Estudio</h3>
+                    <p>Transformamos este espacio para maximizar la concentración. Menos ruido, menos consumo y más foco para tus exámenes.</p>
                 </div>
             </div>
         </div>
@@ -225,26 +280,27 @@
             <div class="equipo-grid">
                 <div class="member">
                     <h3>¡Te presentamos a Amador!</h3>
-                    <p>El hermano mayor. Espíritu libre y una de las mentes más brillantes de la gestión empresarial en la UE[cite: 17, 18, 20].</p>
-                    <strong>Superpoder: El papeleo[cite: 19].</strong>
+                    <p>El hermano mayor. Espíritu libre y amante de la naturaleza. Detrás de ese cubo hay una de las mentes más brillantes de la gestión empresarial.</p>
+                    <strong>Superpoder: El papeleo.</strong>
                 </div>
                 <div class="member">
                     <h3>¡Conoce a Aitor!</h3>
-                    <p>El hermano menor. Cabeza pensante y mano de obra principal. Perfeccionista al milímetro y optimista a prueba de escombros[cite: 21, 22, 23].</p>
+                    <p>El hermano menor. Cabeza pensante y mano de obra principal. Perfeccionista al milímetro y optimista a prueba de escombros.</p>
+                    <strong>Misión: Dejar tu casa exactamente como la quieres.</strong>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="contacto">
-        <h2>Cuentas claras y sin vueltas [cite: 30]</h2>
+        <h2>Menos palabras, mejores resultados</h2>
         <p>¿Hablamos de tu futuro hogar?</p>
         <div class="contact-box">
-            inkahouse.info@gmail.com [cite: 33]<br>
-            @inkahouse.official [cite: 33]
+            inkahouse.info@gmail.com<br>
+            @inkahouse.official
         </div>
-        <a href="mailto:inkahouse.info@gmail.com" class="btn-cta">PEDIR PRESUPUESTO GRATIS</a>
-        <p style="margin-top: 50px; opacity: 0.5; font-size: 0.7rem;">© 2026 INK A HOUSE - Menos palabras, mejores resultados[cite: 32].</p>
+        <a href="mailto:inkahouse.info@gmail.com" class="btn-cta">¡SOLICITAR INFORMACIÓN!</a>
+        <p style="margin-top: 50px; opacity: 0.6; font-size: 0.75rem;">© 2026 INK A HOUSE - Transformamos viviendas, facilitamos futuros.</p>
     </footer>
 
 </body>
