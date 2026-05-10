@@ -13,6 +13,7 @@
             --navy: #134f75;   
             --white: #ffffff;
             --gray: #f4f4f4;
+            --light-blue: #f4fbff;
             --border-width: 4px;
         }
 
@@ -95,28 +96,32 @@
         }
         .mision h2 {
             color: var(--yellow);
-            text-align: center; /* Centrar el título */
+            text-align: center;
             margin-bottom: 30px;
         }
         .mision-flex {
             display: flex;
-            justify-content: center; /* Centrar el bloque de texto */
+            justify-content: center;
             align-items: center;
         }
         .mision-text {
-            max-width: 800px; /* Ancho máximo para legibilidad */
+            max-width: 800px;
             width: 100%;
         }
         .mision-box {
-            border: 6px solid var(--yellow); /* Borde completo */
-            border-radius: 15px; /* Esquinas redondeadas */
-            padding: 40px; /* Acolchado */
-            background: var(--white); /* Fondo blanco para legibilidad */
-            color: var(--navy); /* Texto navy sobre fondo blanco */
-            text-align: center; /* Centrar todo el texto interior */
+            border: 6px solid var(--yellow);
+            border-radius: 15px;
+            padding: 40px;
+            background: var(--white);
+            color: var(--navy);
+            text-align: center;
         }
 
         /* --- SERVICIOS --- */
+        #servicios {
+            background-color: var(--light-blue);
+            color: var(--navy);
+        }
         .grid-servicios {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -139,9 +144,36 @@
         .obj-item strong { display: block; font-family: 'Inknut Antiqua', serif; font-size: 1.1rem; margin-bottom: 10px; }
 
         /* --- CASOS REALES --- */
-        .proyecto { background: var(--white); display: flex; gap: 45px; align-items: center; margin-bottom: 50px; }
+        #proyectos { 
+            background-color: var(--light-blue); 
+        }
+        .proyecto { background: var(--white); display: flex; gap: 45px; align-items: center; margin-bottom: 50px; padding: 20px; border-radius: 20px; border: 2px solid #e0eaf0; }
         .proyecto:nth-child(even) { flex-direction: row-reverse; }
-        .proyecto-img { flex: 1; background: var(--yellow); height: 320px; border: var(--border-width) solid var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--navy); border-radius: 20px; font-family: 'Inknut Antiqua', serif; text-align: center; padding: 20px; }
+        .proyecto-img { 
+            flex: 1; 
+            background: var(--yellow); 
+            height: 320px; 
+            border: var(--border-width) solid var(--navy); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: 800; 
+            color: var(--navy); 
+            border-radius: 20px; 
+            font-family: 'Inknut Antiqua', serif; 
+            text-align: center; 
+            padding: 0px; 
+            overflow: hidden;
+        }
+        
+        /* Ajuste de la foto */
+        .proyecto-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
         .proyecto-info { flex: 1; }
 
         /* --- EQUIPO --- */
@@ -171,6 +203,7 @@
             .hero h1 { font-size: 2.2rem; }
             .proyecto, .obj-list { flex-direction: column; grid-template-columns: 1fr; }
             .member { width: 100%; }
+            .proyecto-img { height: 250px; }
         }
     </style>
 </head>
@@ -240,13 +273,13 @@
                     <strong>Facilitamos futuros:</strong> Abrimos puertas a jóvenes con reformas, compras y alquileres a precios reales.
                 </div>
                 <div class="obj-item">
-                    <strong>Expansión Nacional:</strong> Nuestra meta es conquistar el mapa. Más casas, más reformas, más futuro nacional.
+                    <strong>Expansión Nacional:</strong> Nuestra meta es conquistar el mapa para un futuro nacional.
                 </div>
                 <div class="obj-item">
-                    <strong>Cuentas Claras:</strong> Olvida el papeleo eterno: aquí todo es rápido, seguro y pensado para tu bolsillo.
+                    <strong>Cuentas Claras:</strong> Olvida el papeleo eterno: rápido, seguro y pensado para tu bolsillo.
                 </div>
                 <div class="obj-item">
-                    <strong>Profesionalidad Radical:</strong> Tu confianza se traduce en una ejecución perfecta y atención obsesiva a los detalles.
+                    <strong>Profesionalidad Radical:</strong> Tu confianza se traduce en una ejecución perfecta.
                 </div>
             </div>
         </div>
@@ -265,7 +298,9 @@
             </div>
 
             <div class="proyecto">
-                <div class="proyecto-img">DISEÑO ACÚSTICO</div>
+                <div class="proyecto-img">
+                    <img src="foto1.jpg" alt="Resultado de diseño acústico y energético">
+                </div>
                 <div class="proyecto-info">
                     <h3>Espacio para el Estudio</h3>
                     <p>Transformamos este espacio para maximizar la concentración. Menos ruido, menos consumo y más foco para tus exámenes.</p>
@@ -280,12 +315,12 @@
             <div class="equipo-grid">
                 <div class="member">
                     <h3>¡Te presentamos a Amador!</h3>
-                    <p>El hermano mayor. Espíritu libre y amante de la naturaleza. Detrás de ese cubo hay una de las mentes más brillantes de la gestión empresarial.</p>
+                    <p>El hermano mayor. Detrás de ese cubo hay una de las mentes más brillantes de la gestión empresarial en la UE.</p>
                     <strong>Superpoder: El papeleo.</strong>
                 </div>
                 <div class="member">
                     <h3>¡Conoce a Aitor!</h3>
-                    <p>El hermano menor. Cabeza pensante y mano de obra principal. Perfeccionista al milímetro y optimista a prueba de escombros.</p>
+                    <p>El hermano menor y mano de obra principal. Perfeccionista al milímetro y optimista a prueba de escombros.</p>
                     <strong>Misión: Dejar tu casa exactamente como la quieres.</strong>
                 </div>
             </div>
